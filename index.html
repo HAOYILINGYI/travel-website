@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ไทยเที่ยวสบาย — ท่องเที่ยว 77 จังหวัด</title>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <nav class="nav">
+    <a class="logo" href="index.html">🌴 ไทยเที่ยวสบาย</a>
+    <ul>
+      <li><a href="index.html">หน้าแรก</a></li>
+      <li><a href="destinations.html">จุดหมายปลายทาง</a></li>
+      <li><a href="about.html">เกี่ยวกับเรา</a></li>
+      <li><a href="contact.html">ติดต่อเรา</a></li>
+    </ul>
+  </nav>
+</header>
+<div class="hero">
+  <h1>ท่องเที่ยว 77 จังหวัดทั่วไทย</h1>
+  <p>ค้นพบที่เที่ยว ราคา และวันเวลาเดินทาง ทั่วทุกภูมิภาค</p>
+  <a class="btn" href="destinations.html">ดูจุดหมายทั้งหมด</a>
+</div>
+<div class="search">
+  <input id="searchInput" type="text" placeholder="ค้นหาจังหวัด เช่น เชียงใหม่...">
+  <button onclick="searchPlace()">ค้นหา</button>
+</div>
+<section>
+  <h2>สถานที่ท่องเที่ยวยอดนิยม</h2>
+  <div class="cards" id="cards">
+    <div class="card">
+      <img src="img/prov-real/chiangmai.png" alt="เชียงใหม่">
+      <div class="body">
+        <h3>เชียงใหม่</h3>
+        <p>เมืองแห่งสายหมอกและวัดเก่าแก่กว่า 300 แห่ง</p>
+        <span class="price">แพ็กเกจเริ่มต้น ฿3,990</span>
+        <a class="btn btn-sm" href="detail.html?place=%E0%B8%81%E0%B8%B5%E0%B8%A2%E0%B8%87%E0%B9%80%E0%B8%AB%E0%B8%A1%E0%B9%88%E0%B8%B2%E0%B8%A2">ดูรายละเอียด</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="img/prov-real/phuket.png" alt="ภูเก็ต">
+      <div class="body">
+        <h3>ภูเก็ต</h3>
+        <p>เกาะสวรรค์แห่งอันดามัน หาดขาว น้ำทะเลใส</p>
+        <span class="price">แพ็กเกจเริ่มต้น ฿5,490</span>
+        <a class="btn btn-sm" href="detail.html?place=%E0%B8%A0%E0%B8%B9%E0%B9%80%E0%B8%81%E0%B9%87%E0%B8%95">ดูรายละเอียด</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="img/prov-real/krabi.png" alt="กระบี่">
+      <div class="body">
+        <h3>กระบี่</h3>
+        <p>ทะเลมรกต หน้าผาหินปูน เหมาะดำน้ำไต่เขา</p>
+        <span class="price">แพ็กเกจเริ่มต้น ฿4,290</span>
+        <a class="btn btn-sm" href="detail.html?place=%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B9%88%E0%B8%B5%E0%B9%88">ดูรายละเอียด</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section style="text-align:center">
+  <h2>ทำไมต้องเที่ยวกับเรา</h2>
+  <p style="max-width:700px;margin:auto">ทีมงานชำนาญด้านการท่องเที่ยวในประเทศมากกว่า 10 ปี ดูแลครบทุกจังหวัดทั่วไทย ราคายุติธรรม ปลอดภัย พร้อมไกด์ท้องถิ่น</p>
+</section>
+<footer><p>© 2026 ไทยเที่ยวสบาย | โทร 02-123-4567 | info@thai-tiew-sabai.com</p></footer>
+<script src="js/main.js"></script>
+</body>
+</html>

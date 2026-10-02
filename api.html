@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>API — ไทยเที่ยวสบาย</title>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <nav class="nav">
+    <a class="logo" href="index.html">🌴 ไทยเที่ยวสบาย</a>
+    <ul>
+      <li><a href="index.html">หน้าแรก</a></li>
+      <li><a href="destinations.html">จุดหมายปลายทาง</a></li>
+      <li><a href="about.html">เกี่ยวกับเรา</a></li>
+      <li><a href="contact.html">ติดต่อเรา</a></li>
+      <li><a href="api.html">API</a></li>
+    </ul>
+  </nav>
+</header>
+<section>
+  <h2>API ข้อมูลจังหวัด</h2>
+  <p style="text-align:center;margin-bottom:20px">ดึงข้อมูล JSON จากไฟล์ <code>api.json</code> ผ่าน <code>fetch()</code></p>
+  <div style="max-width:600px;margin:auto 0 20px;display:flex;gap:10px">
+    <input id="apiSearch" placeholder="ค้นหาชื่อจังหวัด..." style="flex:1;padding:10px;border-radius:8px;border:1px solid #cbd5e0">
+    <button class="btn" onclick="filterApi()">ค้นหา</button>
+  </div>
+  <div class="cards" id="apiCards"></div>
+</section>
+<footer><p>© 2026 ไทยเที่ยวสบาย</p></footer>
+<script>
+let DATA = [];
+fetch('api.json').then(r => r.json()).then(d => { DATA = d; render(d); });
+function render(list) {
+  document.getElementById('apiCards').innerHTML = list.map(p =>
+    '<div class="card"><img src="' + p.image + '" alt="' + p.name + '"><div class="body"><h3>' + p.name +
+    '</h3><p>' + p.days + '</p><span class="price">ราคาเริ่มต้น ' + p.price + '</span></div></div>').join('');
+}
+function filterApi() {
+  const q = document.getElementById('apiSearch').value.trim();
+  render(DATA.filter(p => p.name.includes(q)));
+}
+</script>
+</body>
+</html>
